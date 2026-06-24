@@ -12,8 +12,10 @@ export function Contact() {
     e.preventDefault()
     setStatus('sending')
     const { error } = await supabase.from('contacts').insert(form)
-    setStatus(error ? 'error' : 'success')
-    if (!error) setForm({ name: '', email: '', message: '' })
+    if (error) { setStatus('error'); return }
+    await supabase.functions.invoke('send-contact-email', { body: form })
+    setStatus('success')
+    setForm({ name: '', email: '', message: '' })
   }
 
   const inputClass = 'w-full bg-gray-900/40 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-300 placeholder-gray-600 outline-none focus:border-orange-500/50 transition-all duration-200'

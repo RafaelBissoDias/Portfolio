@@ -24,3 +24,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Claude Code — contexto local, não vai pro repo
+CLAUDE.md
+.claude/

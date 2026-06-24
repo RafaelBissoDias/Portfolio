@@ -78,4 +78,4 @@ Este projeto serve dois propósitos:
 
 ---
 
-Feito com Claude Code + React + Supabase + Vercel.
+Feito com React + PostgreSQL.

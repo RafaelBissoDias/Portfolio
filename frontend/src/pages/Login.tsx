@@ -40,6 +40,13 @@ export function Login() {
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required className={inputClass} />
           <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required className={inputClass} />
           {error && <p className="text-red-500 text-sm font-mono">&gt; {error}</p>}
+          <div className="border border-orange-500/30 bg-orange-500/5 rounded-xl px-4 py-3 text-center">
+            <p className="text-orange-400/80 text-xs font-mono leading-relaxed">
+              <span className="text-orange-500 font-bold">// demo</span><br />
+              user: <span className="text-orange-300">recruiter@dev.com</span><br />
+              senha: <span className="text-orange-300">contratado!</span>
+            </p>
+          </div>
           <button
             type="submit"
             disabled={submitting}

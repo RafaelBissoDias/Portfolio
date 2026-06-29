@@ -42,13 +42,22 @@ insert into public.skills (name, category, level, sort_order) values
 -- Projetos baseados no CV
 insert into public.projects (title, description, tech_stack, github_url, live_url, featured, sort_order) values
   (
-    'Plataforma de Conformidade LGPD',
-    'Produto core de autodiagnóstico de conformidade LGPD e gestão de documentos legais para PMEs. Desenvolvimento end-to-end com integrações de RAG para análise de documentos.',
-    array['TypeScript', 'React.js', 'Node.js', 'NestJS', 'PostgreSQL', 'Python', 'FastAPI', 'Docker', 'CI/CD'],
-    null,
-    null,
+    'FeatherMD',
+    'Editor Markdown web com preview em tempo real, múltiplas abas, exportação PDF, syntax highlighting, Find & Replace, scroll sync e suporte a PWA. Integra File System Access API para abrir pastas locais diretamente no browser.',
+    array['React 19', 'TypeScript', 'Vite', 'Tailwind v4', 'CodeMirror 6', 'PWA', 'Docker'],
+    'https://github.com/RafaelBissoDias/feather-md',
+    'https://feather-md.vercel.app/',
     true,
     1
+  ),
+  (
+    'Portal GPRIME TV',
+    'Desenvolvimento e manutenção do portal web da GPRIME TV, com foco em performance, disponibilidade e experiência do usuário.',
+    array['HTML5', 'CSS3', 'JavaScript'],
+    null,
+    'https://gprime.tv.br/',
+    true,
+    2
   ),
   (
     'Sistema de Check-in de Ativos via QR Code',
@@ -57,32 +66,5 @@ insert into public.projects (title, description, tech_stack, github_url, live_ur
     null,
     null,
     true,
-    2
-  ),
-  (
-    'Portal GPRIME TV',
-    'Desenvolvimento e manutenção do portal web da GPRIME TV, com foco em performance, disponibilidade e experiência do usuário.',
-    array['HTML5', 'CSS3', 'JavaScript'],
-    null,
-    'https://gprime.tv.br/',
-    false,
     3
-  ),
-  (
-    'Dashboard de KRIs — Segurança Cibernética',
-    'Dashboards executivos em Power BI para monitoramento de KRIs (Key Risk Indicators) e postura de segurança cibernética para relatórios de conformidade regulatória.',
-    array['Power BI', 'GRC', 'KRIs'],
-    null,
-    null,
-    false,
-    4
-  ),
-  (
-    'Plataformas de Segurança Cibernética',
-    'Desenvolvimento fullstack de portais de auditoria digital e sistemas de conformidade com dashboards dinâmicos para gestão de scans de vulnerabilidades e controle de acessos (IAM).',
-    array['Next.js', 'React.js', 'Node.js', 'NestJS', 'TypeScript', 'MongoDB', 'RabbitMQ', 'Docker', 'Kubernetes'],
-    null,
-    null,
-    true,
-    5
   );
